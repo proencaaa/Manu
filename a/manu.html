@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Manu My Girl🖤🖤</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .intro {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #121212;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .intro h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .intro button {
+      background: #e91e63;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .intro button:hover {
+      background: #c2185b;
+    }
+
+    #siteContent {
+      display: none;
+    }
+
+    header {
+      padding: 20px;
+      background: #1f1f1f;
+      border-bottom: 1px solid #333;
+    }
+
+    h1 {
+      margin: 10px 0;
+    }
+
+    .player {
+      margin-top: 15px;
+    }
+
+    .timer {
+      font-size: 2em;
+      margin: 30px 0;
+    }
+
+    .collage-section {
+      background: #000;
+      padding: 40px 20px;
+      background-image: url('nos.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .text-message {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      background: #e91e63;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background: #c2185b;
+    }
+
+    iframe {
+      width: 300px;
+      height: 80px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .timer {
+        font-size: 1.2em;
+      }
+
+      iframe {
+        width: 100%;
+        height: 80px;
+      }
+    }
+
+    .floating-heart {
+      position: fixed;
+      bottom: 0;
+      font-size: 20px;
+      animation: floatUp ease-in infinite;
+      color: #ff5e99;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .wave-divider {
+     background: transparent;
+     overflow: hidden;
+     line-height: 0;
+     margin-top: -5px;
+    }
+
+    .matrix-mode-toggle {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.matrix-mode-toggle button {
+  background-color: #d60000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.matrix-mode-toggle button:hover {
+  background-color: #9d0808;
+}
+
+.final-message {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela de boas-vindas -->
+  <div class="intro" id="intro">
+    <h1>Feliz Dia dos Namorados 🖤</h1>
+    <p>Clique abaixo para começar essa surpresa feita com amor...</p>
+    <button onclick="startSite()">Começar</button>
+  </div>
+
+  <!-- Conteúdo do site -->
+  <div id="siteContent">
+    <header>
+      <h1>Feliz Dia dos Namorados 🖤</h1>
+      <p>Uma playlist só pra nós dois:</p>
+      <div class="player" id="player"></div>
+      <div>
+        <button onclick="setTrack(0)">🎵 Música 1</button>
+        <button onclick="setTrack(1)">🎵 Música 2</button>
+        <button onclick="setTrack(2)">🎵 Música 3</button>
+        <button onclick="setTrack(3)">🎵 Música 4</button>
+        <button onclick="setTrack(4)">🎵 Música 5</button>
+      </div>
+    </header>
+
+    <div class="timer" id="loveTimer">
+      Amor contado desde 19/03/2025 🖤
+    </div>
+
+    <section class="collage-section">
+      <div class="text-message">
+        <h2>O quanto eu te amo...</h2>
+        <p>
+          Eu me apaixonei por você, mas não foi pela sua aparência,nem por causa do seu corpo, nem por qualquer coisa fútil, me apaixonei por você, pela pessoa q você é, não precisei te tocar, não precisei te sentir, desde o primeiro instante eu senti que seria você, é meu coração te escolheu. a sua risada, seu modo de falar, tudo em você me completa, eu só quero vc, não preciso de mais nada, além de você, é sempre saiba disso. Quero passar madrugadas ouvindo suas histórias, quero te ver sorrir quando ouvir meus planos bobos, quero mandar suas insegurança ir embora, quero te fazer se sentir importante mesmo quando o mundo tentar fazer você pensar o contrário, quero ser pra você tudo o que um dia eu quis que alguém fosse pra mim, quero ouvir suas piadas ruins é acordar de manhã e me sentir feliz por simplesmente saber q vou ler uma msg sua. eu descobri o que era amor, quando as minhas palavras se tornaram insuficiente para descrever o que sinto por você. obrigado por tudo.
+Te amo🖤🖤
+        </p>
+      </div>
+    </section>
+  </div>
+
+<!-- Divisória ondulada entre colagem e matrix -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="width: 100%; height: 100px;">
+    <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#0d0d0d"></path>
+  </svg>
+</div>
+  
+<div class="matrix-mode-toggle">
+  <button onclick="toggleMatrixMode()">Clique</button>
+</div>
+
+<canvas id="matrixCanvas" style="width:100%; height:400px; display:block;"></canvas>
+
+<script>
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+
+  canvas.height = 400;
+  canvas.width = window.innerWidth;
+
+  let modeSurpresa = false;
+
+  let fraseNormal = "My Love All Mine";
+  let fraseSurpresa = "Eu Te amo Muito";
+  let textColor = "#FF0000";
+
+  let fraseAtual = fraseNormal.split("");
+
+  const fontSize = 18;
+  const columns = Math.floor(canvas.width / fontSize);
+  const drops = Array(columns).fill(0);
+  const columnTexts = Array(columns).fill(0).map(() => ({ index: 0 }));
+
+  function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = textColor;
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < columns; i++) {
+      const col = columnTexts[i];
+      const char = fraseAtual[col.index % fraseAtual.length];
+      ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+      drops[i]++;
+      col.index++;
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+        drops[i] = 0;
+        col.index = 0;
+      }
+    }
+  }
+
+  setInterval(drawMatrix, 50);
+
+  function toggleMatrixMode() {
+    modeSurpresa = !modeSurpresa;
+
+    if (modeSurpresa) {
+      fraseAtual = fraseSurpresa.split("");
+      textColor = "#FFFF00";
+      document.querySelector('.matrix-mode-toggle button').textContent = "Desativar 🖤🖤";
+    } else {
+      fraseAtual = fraseNormal.split("");
+      textColor = "#FF0000";
+      document.querySelector('.matrix-mode-toggle button').textContent = "Clique 🖤🖤";
+    }
+  }
+</script>
+
+<section class="final-message">
+  <p id="typedText"></p>
+  
+</section>
+
+
+  <script>
+    function startSite() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("siteContent").style.display = "block";
+      setTrack(0); // toca a primeira música
+    }
+
+    const startDate = new Date("2025-03-19T00:00:00");
+    function updateTimer() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("loveTimer").innerText =
+        `Eu te amo há: ${days} dias, ${hours}h ${minutes}m ${seconds}s 🖤`;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+
+    const tracks = [
+      "https://open.spotify.com/embed/track/1mSxbLW7fKABfeY4lGpg0E?utm_source=generator",
+      "https://open.spotify.com/embed/track/5TTGoX70AFrTvuEtqHK37S?utm_source=generator",
+      "https://open.spotify.com/embed/track/3vkCueOmm7xQDoJ17W1Pm3?utm_source=generator",
+      "https://open.spotify.com/embed/track/5XeFesFbtLpXzIVDNQP22n?utm_source=generator",
+      "https://open.spotify.com/embed/track/5lLKJdDPy7qbsta6d88lKE?utm_source=generator"
+    ];
+
+    function setTrack(index) {
+      document.getElementById("player").innerHTML = `
+        <iframe src="${tracks[index]}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      `;
+    }
+
+    // Efeito de corações flutuantes
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "floating-heart";
+      heart.textContent = "🖤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 500);
+
+    
+  const mensagem = `Eu ainda te olho da mesma forma que eu te olhei desde a primeira vez q eu te vi🖤
+  Eu te quero para sempre meu amor🖤
+  minha princesa🖤`;
+  
+  let i = 0;
+  const velocidade = 50; // milissegundos por letra
+
+  function typeMessage() {
+    if (i < mensagem.length) {
+      document.getElementById("typedText").innerHTML += mensagem.charAt(i) === "\n" ? "<br>" : mensagem.charAt(i);
+      i++;
+      setTimeout(typeMessage, velocidade);
+    }
+  }
+
+  // Espera carregar a página
+  window.addEventListener("load", typeMessage);
+
+  </script>
+</body>
+</html>
